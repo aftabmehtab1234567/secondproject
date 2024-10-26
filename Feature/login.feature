@@ -16,15 +16,12 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
-Feature: Login
 @regression
+Feature: Login
   Scenario: Verify User is able to login with correct credentials
     Given user Launch Chrome Browser 
     When User opens url "https://www.saucedemo.com/"
     And  User enter UserName as "standard_user" and Password as "secret_sauce"
     And  Click on Login
     Then Page Title should be "Swag Labs"
-    When User click on the menu button
-    When User click on the log out link
     And  Close the Browser

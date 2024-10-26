@@ -17,11 +17,11 @@ public class Stepdef {
 
 	@Given("user Launch Chrome Browser")
 	public void user_launch_chrome_browser() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--remote-allow-origins=*");
 
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(options);
+		//WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 
 		l = new LoginPage(driver);
 	}
@@ -61,18 +61,6 @@ public class Stepdef {
 			System.out.println("False");
 
 		}
-	}
-	
-	@When ("User click on the menu button")
-	public void user_click_on_the_menu_button() throws InterruptedException {
-		l.clickOnMenuButton();
-		Thread.sleep(2000);
-	}
-
-	@When("User click on the log out link")
-	public void user_click_on_the_log_out_link() {	
-		l.clickOnLogOutButton();
-
 	}
 
 	@When("Close the Browser")
